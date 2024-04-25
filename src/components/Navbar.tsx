@@ -1,4 +1,4 @@
-import { Container, Nav, Navbar as NavbarBS } from "react-bootstrap";
+import { Container, Form, Nav, Navbar as NavbarBS } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import "../custom.css";
 
@@ -24,6 +24,15 @@ export function Navbar() {
           </Nav.Link>
           {/*<Nav.Link href="#contacts">Contacts</Nav.Link>*/}
         </Nav>
+
+        <Form>
+          <Form.Control
+            placeholder="Search for items"
+            type="text"
+            //todo value={}
+            //todo onChange={(e) => FUNCTION(e.target.value)}
+          />
+        </Form>
       </Container>
     </NavbarBS>
   );
