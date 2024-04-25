@@ -26,14 +26,14 @@ export function StoreItem({ id, name, price, img, features }: StoreItemProps) {
             <span className="fs-3">{name}</span>
             <span className="text-muted fs-5">${price}</span>
           </Card.Title>
-          <Card.Text>
+          <Card.Subtitle className="text-muted">
             <h4>Key features:</h4>
             <ul>
               {features.map((feature: string) => (
                 <li>{feature}</li>
               ))}
             </ul>
-          </Card.Text>
+          </Card.Subtitle>
         </div>
 
         <div className="mb-1">
