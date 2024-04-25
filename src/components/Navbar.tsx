@@ -4,10 +4,7 @@ import "../custom.css";
 
 export function Navbar() {
   return (
-    <NavbarBS
-      sticky="top"
-      className="navbar navbar-expand-lg bg-light-subtle gradient-navbar"
-    >
+    <NavbarBS sticky="top" className="navbar navbar-expand-lg gradient-navbar">
       <Container>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>

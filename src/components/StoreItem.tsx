@@ -38,7 +38,7 @@ export function StoreItem({ id, name, price, img, features }: StoreItemProps) {
 
         <div className="mb-1">
           {quantity === 0 ? (
-            <Button variant="outline-secondary" className="w-100">
+            <Button variant="success" className="w-100">
               Add to cart
             </Button>
           ) : (

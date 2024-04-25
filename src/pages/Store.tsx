@@ -5,7 +5,7 @@ import { StoreItem } from "../components/StoreItem.tsx";
 export function Store() {
   return (
     <>
-      <h1 className="m-2">35mm Film Cameras</h1>
+      <h1 className="m-1">35mm Film Cameras</h1>
 
       {/* <Form className="d-flex m-3">
         <Form.Control
