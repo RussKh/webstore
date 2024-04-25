@@ -1,4 +1,4 @@
-.gradient-custom {
+.gradient-navbar {
   /* fallback for old browsers */
   background: #6a11cb;
 
@@ -12,7 +12,7 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(
     to right,
-    rgba(207, 104, 31, 0.9),
-    rgba(213, 252, 37, 0.9)
+    rgba(239, 151, 107, 0.9),
+    rgba(243, 189, 154, 0.9)
   );
 }

@@ -6,7 +6,7 @@ export function Navbar() {
   return (
     <NavbarBS
       sticky="top"
-      className="navbar navbar-expand-lg bg-light-subtle gradient-custom"
+      className="navbar navbar-expand-lg bg-light-subtle gradient-navbar"
     >
       <Container>
         <Nav className="me-auto">
