@@ -1,1 +1,38 @@
-[  {    "id": 1,    "name": "1 Outfit",    "price": 99,    "img": "/images/ilford50.jpeg"  },  {    "id": 2,    "name": "1 Outfit",    "price": 99,    "img": "/images/ilford100.webp"  },  {    "id": 3,    "name": "1 Outfit",    "price": 99,    "img": "/images/ilford400.webp"  },  {    "id": 4,    "name": "4 Outfit",    "price": 99,    "img": "/images/kentmere100.webp"  },  {    "id": 5,    "name": "5 Outfit",    "price": 99,    "img": "/images/kentmere400.webp"  },  {    "id": 6,    "name": "6 Outfit",    "price": 99,    "img": "/images/canister.jpg"  }]
+[
+  {
+    "id": 1,
+    "name": "blue",
+    "price": 99,
+    "img": "/images/ilford50.jpeg"
+  },
+  {
+    "id": 2,
+    "name": "brown",
+    "price": 99,
+    "img": "/images/ilford100.webp"
+  },
+  {
+    "id": 3,
+    "name": "red",
+    "price": 99,
+    "img": "/images/ilford400.webp"
+  },
+  {
+    "id": 4,
+    "name": "brown",
+    "price": 99,
+    "img": "/images/kentmere100.webp"
+  },
+  {
+    "id": 5,
+    "name": "green",
+    "price": 99,
+    "img": "/images/kentmere400.webp"
+  },
+  {
+    "id": 6,
+    "name": "orange",
+    "price": 99,
+    "img": "/images/canister.jpg"
+  }
+]
