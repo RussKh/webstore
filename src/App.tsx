@@ -6,25 +6,30 @@ import {Home} from "./pages/Home.tsx";
 import {Contacts} from "./pages/Contacts.tsx";
 import {About} from "./pages/About.tsx";
 import {Store} from "./pages/Store.tsx";
+import {Container} from "react-bootstrap";
+import {ShoppingCartProvider} from "./context/ShoppingCartContext.tsx";
+
 
 function App() {
 
   return (
-    <>
-    <Navbar/>
+    <ShoppingCartProvider>
+        <Navbar/>
 
-      <Routes>
+        <Container className="mb-3">
+            <Routes>
 
-        <Route path="/" element={<Home/>}/>
-        <Route path="/contacts" element={<Contacts />}/>
-        <Route path="/about" element={<About />}/>
-        <Route path="/store" element={<Store />}
+                <Route path="/" element={<Home/>}/>
+                <Route path="/contacts" element={<Contacts />}/>
+                <Route path="/about" element={<About />}/>
+                <Route path="/store" element={<Store />}
+                />
 
+            </Routes>
 
-        />
+        </Container>
 
-      </Routes>
-    </>
+    </ShoppingCartProvider>
   )
 }
 
