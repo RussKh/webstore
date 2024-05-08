@@ -1,7 +1,6 @@
 [
   {
     "id": 1,
-<<<<<<< HEAD
     "name": "blue",
     "price": 99,
     "img": "/images/ilford50.jpeg"
@@ -35,76 +34,5 @@
     "name": "orange",
     "price": 99,
     "img": "/images/canister.jpg"
-=======
-    "name": "Kodak Ektar H35N Half-Frame Film Camera (Striped Black)",
-    "price": 64.99,
-    "img": "/images/Kodak-Ektar-H35N.jpeg",
-    "features": [
-      "35mm Half-Frame Film Camera",
-      "For Color and Black & White Film",
-      "Fixed-Focus Wide-Angle Lens",
-      "Built-In Flash"
-    ]
-  },
-  {
-    "id": 2,
-    "name": "Kodak Ektar H35N Half-Frame Film Camera (Striped Green)",
-    "price": 64.99,
-    "img": "/images/Kodak-Ektar-H35N-STRIPED-GREEN.jpeg",
-    "features": [
-      "35mm Half-Frame Film Camera",
-      "For Color and Black & White Film",
-      "Fixed-Focus Wide-Angle Lens",
-      "Built-In Flash"
-    ]
-  },
-  {
-    "id": 3,
-    "name": "Kodak Ultra F9 Reusable 35mm Camera (Dark Night Green)",
-    "price": 64.99,
-    "img": "/images/Kodak-Ultra-F9.avif",
-    "features": [
-      "35mm Half-Frame Film Camera",
-      "For Color and Black & White Film",
-      "Fixed-Focus Wide-Angle Lens",
-      "Built-In Flash"
-    ]
-  },
-  {
-    "id": 4,
-    "name": "Kodak i60 Reusable 35mm Film Camera (Kodak Yellow)",
-    "price": 64.99,
-    "img": "/images/Kodak-i60.avif",
-    "features": [
-      "35mm Half-Frame Film Camera",
-      "For Color and Black & White Film",
-      "Fixed-Focus Wide-Angle Lens",
-      "Built-In Flash"
-    ]
-  },
-  {
-    "id": 5,
-    "name": "Kodak M38 35mm Film Camera with Flash (Lavender)",
-    "price": 64.99,
-    "img": "/images/Kodak-M38.avif",
-    "features": [
-      "35mm Half-Frame Film Camera",
-      "For Color and Black & White Film",
-      "Fixed-Focus Wide-Angle Lens",
-      "Built-In Flash"
-    ]
-  },
-  {
-    "id": 6,
-    "name": "Reto Project Ultra-Wide & Slim 35mm Film Camera (Yellow)",
-    "price": 64.99,
-    "img": "/images/Reto-Project-YELLOW.jpeg",
-    "features": [
-      "35mm Half-Frame Film Camera",
-      "For Color and Black & White Film",
-      "Fixed-Focus Wide-Angle Lens",
-      "Built-In Flash"
-    ]
->>>>>>> 21dafd14d557665c756ab625272095249305c14f
   }
 ]
