@@ -1,4 +1,3 @@
-import Form from "react-bootstrap/Form";
 import { Col, Row } from "react-bootstrap";
 import storeItems from "../data/items.json";
 import { StoreItem } from "../components/StoreItem.tsx";
@@ -20,15 +19,6 @@ export function Store() {
   return (
     <>
       <h1>Store Page is Here</h1>
-      {/* 
-      <Form className="d-flex">
-        <Form.Control
-          placeholder="Search for items"
-          type="text"
-          value={searchTerm}
-          onChange={(event) => setSearchTerm(event.target.value)}
-        />
-      </Form> */}
 
       <Row xs={1} md={2} lg={3}>
         {filteredItems.map((item) => (

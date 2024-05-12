@@ -1,6 +1,8 @@
 import { createContext, ReactNode, useContext, useState } from "react";
 import storeItems from "../data/items.json";
 import { Cart } from "../components/Cart.tsx";
+import { useLocalStorage } from "../localStorage/useLocalStorage.ts";
+import { PopupStore } from "../components/PopupStore.tsx";
 
 type ShoppingCartContext = {
   searchTerm: string;
@@ -17,6 +19,9 @@ type ShoppingCartContext = {
 
   openCart: () => void;
   closeCart: () => void;
+
+  openPopupStore: () => void;
+  closePopupStore: () => void;
 };
 
 type ShoppingCartProviderProps = {
@@ -45,14 +50,19 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
   const [searchTerm, setSearchTerm] = useState("");
   const [filteredItems, setFilteredItems] = useState<StoreItem[]>(storeItems);
   const [isOpen, setIsOpen] = useState(false);
+  const [isPopupStoreOpen, setIsPopupStoreOpen] = useState(false);
 
   // открытие и закрытие корзины
 
   const openCart = () => setIsOpen(true);
-
   const closeCart = () => setIsOpen(false);
+  const openPopupStore = () => setIsPopupStoreOpen(true);
+  const closePopupStore = () => setIsPopupStoreOpen(false);
 
-  const [cartItems, setCartItems] = useState<CartItem[]>([]);
+  const [cartItems, setCartItems] = useLocalStorage<CartItem[]>(
+    "shoppingCart",
+    []
+  );
 
   // нам нужно получать quantity динамически
   const cartQuantity = cartItems.reduce(
@@ -123,10 +133,14 @@ export function ShoppingCartProvider({ children }: ShoppingCartProviderProps) {
 
         openCart,
         closeCart,
+
+        openPopupStore,
+        closePopupStore,
       }}
     >
       {children}
 
+      <PopupStore isPopupStoreOpen={isPopupStoreOpen} />
       <Cart isOpen={isOpen} />
     </ShoppingCartContext.Provider>
   );

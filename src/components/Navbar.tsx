@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 export function Navbar() {
-  const { cartQuantity, openCart, searchTerm, setSearchTerm } =
+  const { cartQuantity, openCart, openPopupStore, searchTerm, setSearchTerm } =
     useShoppingCart();
   return (
     <NavbarBS className="sticky-top navbar-expand-lg bg-light-subtle">
@@ -28,24 +28,23 @@ export function Navbar() {
             Store
           </Nav.Link>
 
-          <Form className="d-flex">
+          {/* <Form className="d-flex">
             <Form.Control
               placeholder="Search for items"
               type="text"
               value={searchTerm}
               onChange={(event) => setSearchTerm(event.target.value)}
             />
-          </Form>
-
-          {/*<Nav.Link href="#contacts">Contacts</Nav.Link>*/}
+          </Form> */}
         </Nav>
 
+        <i className="bi bi-search" onClick={openPopupStore}></i>
         <i
           className="bi bi-cart m-2"
           style={{ fontSize: "1.5rem" }}
           onClick={openCart}
         ></i>
-        <Button className="badge text-bg-secondary" variant="outline-secondary">
+        <Button className="badge text-bg-danger" variant="outline-none">
           {cartQuantity || ""}
         </Button>
       </Container>
