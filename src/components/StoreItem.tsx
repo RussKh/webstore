@@ -11,12 +11,6 @@ type StoreItemProps = {
   rating: number;
 };
 
-{
-  /* <i class="bi bi-star-fill"></i>
-  <i class="bi bi-star-half"></i>
-  <i class="bi bi-star"></i> */
-}
-
 export function StoreItem({
   id,
   name,
