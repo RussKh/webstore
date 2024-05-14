@@ -9,3 +9,5 @@
 * add add to cart button to popupstoreitem
 * add bar above the navbar for free delivery and such ads
 * add sign in popup offcanvas
+* in cart update quantity logic so there are only 2 digits after the .
+* separate cards mb

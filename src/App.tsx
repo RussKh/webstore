@@ -7,6 +7,7 @@ import { About } from "./pages/About.tsx";
 import { Store } from "./pages/Store.tsx";
 import { Container } from "react-bootstrap";
 import { ShoppingCartProvider } from "./context/ShoppingCartContext.tsx";
+import { ItemDetails } from "./pages/ItemDetails.tsx";
 
 function App() {
   return (
@@ -19,6 +20,8 @@ function App() {
           <Route path="/contacts" element={<Contacts />} />
           <Route path="/about" element={<About />} />
           <Route path="/store" element={<Store />} />
+
+          <Route path="/products/:id" element={<ItemDetails />} />
         </Routes>
       </Container>
     </ShoppingCartProvider>

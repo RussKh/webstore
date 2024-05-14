@@ -18,7 +18,7 @@ export function Store() {
   }, [searchTerm]);
   return (
     <>
-      <h1>Store Page is Here</h1>
+      {/* <h1>Store Page is Here</h1> */}
 
       <Row xs={1} md={2} lg={3}>
         {filteredItems.map((item) => (

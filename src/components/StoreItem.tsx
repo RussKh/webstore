@@ -1,6 +1,8 @@
 import { Button, ButtonGroup, Card } from "react-bootstrap";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 import "../App.css";
+import { Link } from "react-router-dom";
+import { formatterCurrency } from "../currency/CurrencyFormater.ts";
 
 type StoreItemProps = {
   id: number;
@@ -19,13 +21,17 @@ export function StoreItem({
   features,
   rating,
 }: StoreItemProps) {
-  const { increaseCartQuantity, removeCartQuantity, getItemQuantity } =
-    useShoppingCart();
+  const {
+    increaseCartQuantity,
+    removeCartQuantity,
+    getItemQuantity,
+    openCart,
+  } = useShoppingCart();
 
   const quantity = getItemQuantity(id);
 
   function stars() {
-    let ratingArr = [];
+    const ratingArr = [];
 
     for (let i = 0; i < Math.floor(rating); i++)
       ratingArr.push("bi bi-star-fill"); // calculates full stars
@@ -38,19 +44,18 @@ export function StoreItem({
   }
 
   return (
-    <Card>
-      <Card.Img
-        variant="top"
-        src={img}
-        style={{ objectFit: "contain", padding: "20px" }}
-        height="250px"
-        width="250px"
-      />
+    <Card className="m-3 border-secondary rounded-0">
+      <Link to={`/products/${id}`}>
+        <Card.Img
+          variant="top"
+          src={img}
+          style={{ objectFit: "contain", padding: "20px" }}
+        />
+      </Link>
       <div>{stars()}</div>
       <Card.Body className="d-flex flex-column">
-        <Card.Title className="d-flex justify-content-between mb-3">
+        <Card.Title>
           <span className="fs-3">{name}</span>
-          <span className="text-muted fs-5">{price}</span>
         </Card.Title>
         <hr />
         <Card.Subtitle className="text-muted">
@@ -62,19 +67,21 @@ export function StoreItem({
           </ul>
         </Card.Subtitle>
 
-        <div className="mb-1">
+        <div className="mb-3">
+          <span className="fs-5 m-3">{formatterCurrency(price)}</span>
+
           {quantity === 0 ? (
             <Button
-              variant="outline-secondary"
-              className="w-100"
+              variant="success"
+              className="w-50"
               onClick={() => increaseCartQuantity(id)} // Add to cart
             >
               Add to cart
             </Button>
           ) : (
             <ButtonGroup aria-label="Basic example">
-              <Button variant="outline-secondary" className="non-reactive">
-                Added to cart
+              <Button variant="outline-success" onClick={openCart}>
+                View in Cart
               </Button>
               <Button
                 variant="outline-danger"

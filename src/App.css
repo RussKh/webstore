@@ -24,3 +24,41 @@
   transform: translateY(-100%);
   max-height: 100%; /* Adjust according to your heading height */
 }
+
+/* Cart Icon Styles */
+.cart-icon {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.cart-item-count {
+  position: absolute;
+  top: -8px;
+  right: -10px;
+  font-size: 12px;
+  border-radius: 15px;
+  border: 1px solid #28a745;
+  color: #28a745;
+  padding: 2px 6px;
+  background-color: white;
+}
+
+.gradient-navbar {
+  /* fallback for old browsers */
+  background: #6a11cb;
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(
+    to right,
+    rgba(207, 104, 31, 0.9),
+    rgba(213, 252, 37, 0.9)
+  );
+
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(
+    to right,
+    rgba(255, 189, 226, 0.9),
+    rgba(252, 112, 56, 0.9)
+  );
+}

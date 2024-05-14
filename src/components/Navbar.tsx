@@ -1,18 +1,13 @@
-import {
-  Button,
-  Container,
-  Form,
-  Nav,
-  Navbar as NavbarBS,
-} from "react-bootstrap";
+import { Button, Container, Nav, Navbar as NavbarBS } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
+import "bootstrap/dist/css/bootstrap.min.css";
+
 export function Navbar() {
-  const { cartQuantity, openCart, openPopupStore, searchTerm, setSearchTerm } =
-    useShoppingCart();
+  const { cartQuantity, openCart, openPopupStore } = useShoppingCart();
   return (
-    <NavbarBS className="sticky-top navbar-expand-lg bg-light-subtle">
+    <NavbarBS className="sticky-top navbar-expand-lg bg-light-subtle gradient-navbar">
       <Container>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>
@@ -27,24 +22,32 @@ export function Navbar() {
           <Nav.Link to="/store" as={NavLink}>
             Store
           </Nav.Link>
-
-          {/* <Form className="d-flex">
-            <Form.Control
-              placeholder="Search for items"
-              type="text"
-              value={searchTerm}
-              onChange={(event) => setSearchTerm(event.target.value)}
-            />
-          </Form> */}
         </Nav>
+        <i
+          className="bi bi-search"
+          style={{ fontSize: "1.2rem" }}
+          onClick={openPopupStore}
+        ></i>
+        {/* <div className="cart-icon ">
+          <i
+            className="bi bi-cart m-2"
+            style={{ fontSize: "1.5rem" }}
+            onClick={openCart}
+          />
 
-        <i className="bi bi-search" onClick={openPopupStore}></i>
+          {cartQuantity > 0 && (
+            <div className="cart-item-count badge badge-pill badge-danger">
+              {cartQuantity}
+            </div>
+          )}
+        </div> */}
+
         <i
           className="bi bi-cart m-2"
           style={{ fontSize: "1.5rem" }}
           onClick={openCart}
         ></i>
-        <Button className="badge text-bg-danger" variant="outline-none">
+        <Button className="badge text-bg-success" variant="outline-none">
           {cartQuantity || ""}
         </Button>
       </Container>
