@@ -32,7 +32,7 @@
   align-items: center;
 }
 
-.cart-item-count {
+/* .cart-item-count {
   position: absolute;
   top: -8px;
   right: -10px;
@@ -43,10 +43,26 @@
   padding: 2px 6px;
   background-color: white;
 }
+.badge_BhGZMmO5ov {
+  align-items: center;
+  border: 2px solid #3f9a59;
+  border-radius: 50%;
+  color: #3f9a59;
+  display: flex;
+  font-size: 0.6875rem;
+  font-weight: 600;
+  height: 1.5rem;
+  justify-content: center;
+  line-height: 1.5rem;
+  min-width: 1.5rem;
+  padding: 0 0.1875rem;
+  text-align: center;
+  z-index: 1;
+} */
 
 .gradient-navbar {
   /* fallback for old browsers */
-  background: #6a11cb;
+  background: #746782;
 
   /* Chrome 10-25, Safari 5.1-6 */
   background: -webkit-linear-gradient(
@@ -58,7 +74,7 @@
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   background: linear-gradient(
     to right,
-    rgba(255, 189, 226, 0.9),
-    rgba(252, 112, 56, 0.9)
+    rgba(18, 221, 136, 0.9),
+    rgba(123, 210, 164, 0.9)
   );
 }

@@ -79,17 +79,13 @@ export function StoreItem({
               Add to cart
             </Button>
           ) : (
-            <ButtonGroup aria-label="Basic example">
-              <Button variant="outline-success" onClick={openCart}>
-                View in Cart
-              </Button>
-              <Button
-                variant="outline-danger"
-                onClick={() => removeCartQuantity(id)}
-              >
-                Remove
-              </Button>
-            </ButtonGroup>
+            <Button
+              variant="outline-success"
+              className="w-50"
+              onClick={openCart}
+            >
+              View in Cart
+            </Button>
           )}
         </div>
       </Card.Body>

@@ -3,12 +3,21 @@ import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
 import "bootstrap/dist/css/bootstrap.min.css";
+import logo from "../../public/images/logo.png";
 
 export function Navbar() {
   const { cartQuantity, openCart, openPopupStore } = useShoppingCart();
   return (
-    <NavbarBS className="sticky-top navbar-expand-lg bg-light-subtle gradient-navbar">
+    <NavbarBS className="sticky-top navbar-expand-lg bg-light-subtle gradient-navbar shadow">
       <Container>
+        <NavbarBS.Brand to="/" as={NavLink}>
+          <img
+            src={logo}
+            height="50"
+            // className="d-inline-block align-top"
+            alt="logo"
+          />
+        </NavbarBS.Brand>
         <Nav className="me-auto">
           <Nav.Link to="/" as={NavLink}>
             Home
@@ -47,10 +56,15 @@ export function Navbar() {
           style={{ fontSize: "1.5rem" }}
           onClick={openCart}
         ></i>
-        <Button className="badge text-bg-success" variant="outline-none">
+        <Button
+          className=".cart-item-count {
+"
+          variant="outline-none"
+        >
           {cartQuantity || ""}
         </Button>
       </Container>
     </NavbarBS>
   );
 }
+<use href="#BhIconColored"></use>;
